@@ -9,8 +9,7 @@ const routes: Routes = [
   },
   {
     path: "ohlcv",
-    loadChildren: () =>
-      import("./list-ohlcv/list-ohlcv.module").then(mod => mod.ListOhlcvModule)
+    loadChildren: "./list-ohlcv/list-ohlcv.module#ListOhlcvModule"
   }
 ];
 
