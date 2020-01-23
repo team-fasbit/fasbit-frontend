@@ -4,8 +4,12 @@ import { Routes, RouterModule } from "@angular/router";
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "ohlcv/BTC",
+    redirectTo: "coins",
     pathMatch: "full"
+  },
+  {
+    path: "coins",
+    loadChildren: "./list-coin/list-coin.module#ListCoinModule"
   },
   {
     path: "ohlcv",

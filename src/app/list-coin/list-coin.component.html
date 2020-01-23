@@ -1,0 +1,37 @@
+<div class="py-4 text-center">
+  <h1 class="mb-0">Coins List</h1>
+</div>
+<div class="pb-4 container-fluid">
+  <table id="coinTable" class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>CMC ID</th>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>CMC Rank</th>
+        <th>Circulating Supply</th>
+        <th>Total Supply</th>
+        <th>Max Supply</th>
+        <th>Price</th>
+        <th>Volume 24</th>
+        <th>Market Cap</th>
+        <th>OHLCV</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let coin of coins">
+        <td>{{coin.cmc_id}}</td>
+        <td>{{coin.name}}</td>
+        <td>{{coin.symbol}}</td>
+        <td>{{coin.cmc_rank}}</td>
+        <td>{{coin.circulating_supply}}</td>
+        <td>{{coin.total_supply}}</td>
+        <td>{{coin.max_supply}}</td>
+        <td>{{coin.price}}</td>
+        <td>{{coin.volume_24h}}</td>
+        <td>{{coin.market_cap}}</td>
+        <td><a [routerLink]="['/ohlcv', coin.symbol]">OHLCV</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

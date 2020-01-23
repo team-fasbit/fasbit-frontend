@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
 import { ListOhlcvService } from "./list-ohlcv.service";

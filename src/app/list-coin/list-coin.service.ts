@@ -5,7 +5,7 @@ import { Observable } from "rxjs/Observable";
 import { environment } from "../../environments/environment";
 
 @Injectable()
-export class ListOhlcvService {
+export class ListCoinService {
   api_url = environment.api_url;
   httpOptions = {
     headers: new HttpHeaders({
@@ -15,10 +15,10 @@ export class ListOhlcvService {
 
   constructor(private http: HttpClient) {}
 
-  getOhlcv(symbol: String): Observable<any> {
+  getCoins(): Observable<any> {
     return this.http.post<any>(
-      this.api_url + "list-ohlcv",
-      { symbol },
+      this.api_url + "list-coins",
+      {},
       this.httpOptions
     );
   }
