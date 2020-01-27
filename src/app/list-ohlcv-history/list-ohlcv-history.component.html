@@ -1,0 +1,31 @@
+<div class="py-4 text-center">
+  <h1 class="mb-0">Last 500 OHLCV list of {{symbol}}</h1>
+</div>
+<div class="pb-4 container-fluid">
+  <table id="ohlcvTable" class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Time Open</th>
+        <th>Time Close</th>
+        <th>Open</th>
+        <th>High</th>
+        <th>Low</th>
+        <th>Close</th>
+        <th>Volume</th>
+        <th>Last Updated</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ohlcv of ohlcvs">
+        <td>{{ohlcv.time_open}}</td>
+        <td>{{ohlcv.time_close}}</td>
+        <td>{{ohlcv.open}}</td>
+        <td>{{ohlcv.high}}</td>
+        <td>{{ohlcv.low}}</td>
+        <td>{{ohlcv.close}}</td>
+        <td>{{ohlcv.volume}}</td>
+        <td>{{ohlcv.last_updated}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

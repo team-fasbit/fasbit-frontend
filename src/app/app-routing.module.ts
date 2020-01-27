@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: "ohlcv",
     loadChildren: "./list-ohlcv/list-ohlcv.module#ListOhlcvModule"
+  },
+  {
+    path: "ohlcv-history",
+    loadChildren: "./list-ohlcv-history/list-ohlcv-history.module#ListOhlcvHistoryModule"
   }
 ];
 
