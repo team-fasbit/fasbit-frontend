@@ -17,6 +17,7 @@
         <th>Market Cap</th>
         <th>OHLCV</th>
         <th>OHLCV History</th>
+        <th>Chart</th>
       </tr>
     </thead>
     <tbody>
@@ -33,6 +34,7 @@
         <td>{{coin.market_cap}}</td>
         <td><a [routerLink]="['/ohlcv', coin.symbol]">OHLCV</a></td>
         <td><a [routerLink]="['/ohlcv-history', coin.symbol]">OHLCV History</a></td>
+        <td><a [routerLink]="['/chart', coin.symbol]">Chart</a></td>
       </tr>
     </tbody>
   </table>

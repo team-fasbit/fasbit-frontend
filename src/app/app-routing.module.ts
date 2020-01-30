@@ -23,6 +23,15 @@ const routes: Routes = [
       import("./list-ohlcv-history/list-ohlcv-history.module").then(
         m => m.ListOhlcvHistoryModule
       )
+  },
+  {
+    path: "chart",
+    loadChildren: () =>
+      import("./coin-chart/coin-chart.module").then(m => m.CoinChartModule)
+  },
+  {
+    path: "**",
+    redirectTo: "coins"
   }
 ];
 
