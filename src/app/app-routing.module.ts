@@ -9,15 +9,20 @@ const routes: Routes = [
   },
   {
     path: "coins",
-    loadChildren: "./list-coin/list-coin.module#ListCoinModule"
+    loadChildren: () =>
+      import("./list-coin/list-coin.module").then(m => m.ListCoinModule)
   },
   {
     path: "ohlcv",
-    loadChildren: "./list-ohlcv/list-ohlcv.module#ListOhlcvModule"
+    loadChildren: () =>
+      import("./list-ohlcv/list-ohlcv.module").then(m => m.ListOhlcvModule)
   },
   {
     path: "ohlcv-history",
-    loadChildren: "./list-ohlcv-history/list-ohlcv-history.module#ListOhlcvHistoryModule"
+    loadChildren: () =>
+      import("./list-ohlcv-history/list-ohlcv-history.module").then(
+        m => m.ListOhlcvHistoryModule
+      )
   }
 ];
 
