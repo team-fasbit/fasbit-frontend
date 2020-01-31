@@ -31,8 +31,7 @@ export class CoinChartComponent implements OnInit {
         x.open,
         x.high,
         x.low,
-        x.close,
-        x.market_cap
+        x.close
       ]);
       Highcharts.stockChart("ohlcv-chart", {
         rangeSelector: {
@@ -48,8 +47,7 @@ export class CoinChartComponent implements OnInit {
             data: this.ohlcvs
           }
         ]
-      }),
-        console.log(this.ohlcvs);
+      });
     });
   }
 }
