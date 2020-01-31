@@ -44,11 +44,8 @@ export class CoinChartComponent implements OnInit {
         series: [
           {
             type: "candlestick",
-            name: this.symbol,
-            data: this.ohlcvs,
-            dataGrouping: {
-              units: [["week", [1]]]
-            }
+            name: this.symbol.toString(),
+            data: this.ohlcvs
           }
         ]
       }),
