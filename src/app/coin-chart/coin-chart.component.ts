@@ -35,6 +35,7 @@ export class CoinChartComponent implements OnInit {
       ]);
       Highcharts.stockChart("ohlcv-chart", {
         rangeSelector: {
+          allButtonsEnabled: true,
           buttons: [{
             type: 'hour',
             count: 24,
@@ -58,6 +59,12 @@ export class CoinChartComponent implements OnInit {
           }],
           selected: 1
         },
+        navigator: {
+          series: {
+            color: '#7798BF',
+            lineColor: '#A6C7ED'
+          }
+        },
         title: {
           text: "Last 24 Hour Chart - OHLC"
         },
@@ -67,7 +74,13 @@ export class CoinChartComponent implements OnInit {
             name: this.symbol.toString(),
             data: this.ohlcvs
           }
-        ]
+        ],
+        plotOptions: {
+          candlestick: {
+            color: '#c02a1d',
+            upColor: '#27892f'
+          }
+        }
       });
     });
   }
