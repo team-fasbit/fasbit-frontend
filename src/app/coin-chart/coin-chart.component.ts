@@ -35,6 +35,27 @@ export class CoinChartComponent implements OnInit {
       ]);
       Highcharts.stockChart("ohlcv-chart", {
         rangeSelector: {
+          buttons: [{
+            type: 'hour',
+            count: 24,
+            text: '24h'
+          }, {
+            type: 'day',
+            count: 7,
+            text: '7d'
+          }, {
+            type: 'day',
+            count: 14,
+            text: '14d'
+          }, {
+            type: 'day',
+            count: 30,
+            text: '30d'
+          }, {
+            type: 'day',
+            count: 90,
+            text: '90d'
+          }],
           selected: 1
         },
         title: {
