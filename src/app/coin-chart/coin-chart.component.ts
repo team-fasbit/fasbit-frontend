@@ -34,6 +34,9 @@ export class CoinChartComponent implements OnInit {
         x.close
       ]);
       Highcharts.stockChart("ohlcv-chart", {
+        chart: {
+          height: 800
+        },
         rangeSelector: {
           allButtonsEnabled: true,
           buttons: [{
